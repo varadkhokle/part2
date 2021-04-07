@@ -1,4 +1,7 @@
 import { Component, VERSION } from '@angular/core';
+import {Router} from '@angular/router';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +9,12 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+  
   name = 'Angular ' + VERSION.major;
+  constructor(public router: Router) {
+  }
+  imports: [
+        FormsModule,
+        ReactiveFormsModule
+  ]
 }
