@@ -1,91 +1,63 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  font-size: 20px;
-  
-}
-.top {
-  padding-left: 10px;
-  padding-top: 1.3rem;
-  padding-bottom: 7px;
+.header {
+  background-color: #383838;
+  height: 150px;
   color: white;
-  background-color: rgb(65, 62, 62);
-  font-size: 15px;
+  padding-top: 35px;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
-.nipsol {
-  margin: 5px;
+img {
+  margin-top: 2px;
+  width: 20px;
+}
+.title {
+  padding-top: 10px;
   font-family: "Fredoka One";
   font-size: 40px;
 }
-
-.middle {
+.line {
+  vertical-align: middle;
+  height: 28px;
   background-color: #9e6df7;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  color: white;
+}
+.content {
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+ .active>a {
+     background-color: black;
+     border-radius: 15px;
+ } 
+ul{
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  color: white;
+  justify-content: center; 
+}
 
+ul .new
+{
+  display: inline-flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+ul .new li a
+{
+  padding: 0 12px;
+  color: white;
+}
+
+ul li.logo
+{
+  display: inline-flex;
+  padding-right: 12px;
   text-align: right;
 }
-.imgg {
-  vertical-align: middle;
-}
-.homeuser {
-  align-items: left;
-}
-.nipsollogo {
-  display: block;
-  align-items: right;
-}
-.last {
-  margin: 25px;
-  padding: 5px;
-}
-.user {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 15px;
-}
-.formside {
-  height: 20%;
-  width: 55%;
-}
-.form-control {
-  width: min-content;
-}
-a {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  padding: 2px 12px;
-}
-.last {
-  margin: 25px;
-  padding: 5px;
-}
-.homeuser {
-  display: inline-flex;
-  flex: 1;
-  align-items: center;
-
-  padding-left: 20px;
-}
-.currentActive {
-  color: white;
-  border: 2px solid white;
-  border-radius: 15px;
-  border-color: black;
-  background-color: black;
-  box-shadow: 50px;
-}
-.myShadow{
-  border-radius: 6px;
-  box-shadow: 10px 10px #D3D3D3;
-  border-width: 2px;
-  border-color: #C1C1C1;
-}
-/* .container_flex{
-  flex:1;
-} */
