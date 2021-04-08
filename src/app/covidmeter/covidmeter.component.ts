@@ -6,11 +6,12 @@ import { UsersService } from "../users.service";
   templateUrl: './covidmeter.component.html',
   styleUrls: ['./covidmeter.component.css']
 })
-export class CovidmeterComponent implements OnInit {
+export class CovidmeterComponent implements OnInit 
+{
   totalData:any;
   countries:any;
-   selectedCountry:any;
-  private covidCaseUrl='https://api.covid19api.com/country/';
+  selectedCountry:any;
+  countryData:any;
   constructor( private user:UsersService) { }
 
   ngOnInit(): void 
@@ -18,21 +19,25 @@ export class CovidmeterComponent implements OnInit {
     this.user.getTotalData().subscribe((result)=>{
       console.warn("Cases",result )
       this.totalData=result
-    })
+    });
 
     this.user.getCountries().subscribe((data)=>{
      console.warn(data) 
      this.countries=data
-    })
+    });
+
+    
   }
-  getCountry(country:any)
+  getCountry(event)
   {
-    this.selectedCountry = country;
-    this.covidCaseUrl='https://api.covid19api.com/country/'+this.selectedCountry;
+    this.user.getCountryData(event.target.value);
+    this.updateCountry();
     console.warn(this.selectedCountry);
   }
   updateCountry()
   {
-    alert(this.selectedCountry)
+    this.user.getCountryDataUrl().subscribe((data:[])=>{
+      this.countryData=data.slice(data.length-10,data.length)
+    })
   }
 }

@@ -29,34 +29,33 @@ img {
   font-display: swap;
 }
 
- .active>a {
-     background-color: black;
-     border-radius: 15px;
- } 
-ul{
+.active > a {
+  background-color: black;
+  border-radius: 5px;
+  border: 2px solid white;
+  font-size: 20px;
+}
+ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
-ul .new
-{
+ul .new {
   display: inline-flex;
   margin-left: 10px;
   margin-right: 10px;
   flex: 1;
 }
 
-ul .new li a
-{
+ul .new li a {
   padding: 0 12px;
   color: white;
 }
 
-ul li.logo
-{
+ul li.logo {
   display: inline-flex;
   padding-right: 12px;
   text-align: right;
